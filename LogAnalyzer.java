@@ -23,7 +23,19 @@ public class LogAnalyzer
         // Create the reader to obtain the data.
         reader = new LogfileReader();
     }
-
+    
+    /**
+     * Constructor que se le pasa el nombre del archivo de log a analizar.
+     */
+    public LogAnalyzer(String nombreFichero)
+    { 
+        // Create the array object to hold the hourly
+        // access counts.
+        hourCounts = new int[24];
+        // Create the reader to obtain the data.
+        reader = new LogfileReader(nombreFichero);
+    }
+    
     /**
      * Analyze the hourly access data from the log file.
      */
