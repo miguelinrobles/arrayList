@@ -1,8 +1,8 @@
 /**
  * Read web server data and analyse
- * hourly access patterns.
  * 
- * @author David J. Barnes and Michael KÃ¶lling.
+ * 
+ * @author David J. Barnes and Michael KÃƒÂ¶lling.
  * @version 2011.07.31
  */
 public class LogAnalyzer
@@ -11,7 +11,7 @@ public class LogAnalyzer
     private int[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
-    // Guarda el valor true cuando se ha ejecutado el método analyzeHourlyData()
+    // Guarda el valor true cuando se ha ejecutado el mÃ©todo analyzeHourlyData()
     private boolean ejecutadoAnalyzeHourlyData;
     /**
      * Create an object to analyze hourly web accesses.
@@ -76,8 +76,8 @@ public class LogAnalyzer
     }
 
     /**
-     * Devuelve el número total de accesos al servidor web registrados en el archivo de log.
-     * Si no se ha ejecutado antes el método analyzeHourlyData() devuelve -1 e informa de ello por pantalla.
+     * Devuelve el nÃºmero total de accesos al servidor web registrados en el archivo de log.
+     * Si no se ha ejecutado antes el mÃ©todo analyzeHourlyData() devuelve -1 e informa de ello por pantalla.
      */
     public int numberOfAccesses()
     {
@@ -89,14 +89,14 @@ public class LogAnalyzer
             }
         }
         else {
-            System.out.println("Debes de ejecutar antes el método analyzeHourlyData()");
+            System.out.println("Debes de ejecutar antes el mÃ©todo analyzeHourlyData()");
         }
         return numeroAccesos;
     }
 
     /**
-     * Devuelve en qué hora el servidor tuvo que responder a más peticiones. 
-     * Si hay empate devuelve la última de las horas. 
+     * Devuelve en quÃ© hora el servidor tuvo que responder a mÃ¡s peticiones. 
+     * Si hay empate devuelve la Ãºltima de las horas. 
      * Si no ha habido accesos informa del hecho por pantalla y devuelve -1.
      */
     public int busiestHour()
@@ -113,11 +113,11 @@ public class LogAnalyzer
                 }
             }
             if (numeroPeticiones == 0) {
-                System.out.println("No se ha realizado ningún acceso al servidor");
+                System.out.println("No se ha realizado ningÃºn acceso al servidor");
             }
         }
         else {
-            System.out.println("Debes de ejecutar antes el método analyzeHourlyData()");
+            System.out.println("Debes de ejecutar antes el mÃ©todo analyzeHourlyData()");
         }
         return horaMasPeticiones;
     }
